@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Contacts creation */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#image {
+  width: 10rem;
+  height: 10rem;
+  background-color: gray;
+  border-radius: 50%;
+}
+#imgInput {
+  display: none;
+}
+form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  border: 1px solid gray;
+  height: 2rem;
+
+}
