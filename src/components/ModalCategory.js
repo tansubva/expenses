@@ -1,179 +1,267 @@
 import { useEffect, useState } from "react";
 const ModalCategory = (props) => {
-    const [icon,setIcon] = useState(null)
-
-    useEffect(() => {
-        if(icon != null) {
-            props.setIcon(icon)
-        props.setState(false)
-        console.log(icon)
-        }
-    },[icon])
-    //  const [iconModel,setIconModel] = useState(true)
+  const [icon, setIcon] = useState(null);
+  useEffect(() => {
+    if (icon != null) {
+      props.setIcon(icon);
+      props.setState(false);
+      console.log(icon);
+    }
+  }, [icon]);
 
   return (
     <div className="modalContainer">
       <div className="modalBody">
         <div className="closeBtn">
-          <button onClick={(() => {props.setState(false)})}>X</button>
+          <img
+            className="
+            cancelIcon"
+            src="images/cancel.svg"
+            alt=""
+            onClick={() => {
+              props.setState(false);
+            }}
+          />
         </div>
+        <h5>Добавить Иконку</h5>
         {/* Food & drinks */}
         <div className="categoriesImages">
           <div>
             <h3>Еда & Напитки</h3>
             <div className="categoryImg">
               <div>
-                <img src="images/food&drinks/supermarket.png" value = {icon} onClick={((e) => {setIcon(e.target.src)})}/>
+                <img
+                  src="images/food&drinks/supermarket.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Продукты</p>
               </div>
               <div className="imagesByCategory">
-                <img src="images/food&drinks/steak.png" value = {icon} onClick={((e) => {setIcon(e.target.src)})}/>
+                <img
+                  src="images/food&drinks/steak.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Рестораны</p>
               </div>
               <div>
-                <img src="images/food&drinks/juice.png" value = {icon} onClick={((e) => {setIcon(e.target.src)})}/>
+                <img
+                  src="images/food&drinks/juice.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Напитки</p>
               </div>
               <div>
-                <img src="images/food&drinks/muffin.png" value = {icon} onClick={((e) => {setIcon(e.target.src)})}/>
+                <img
+                  src="images/food&drinks/muffin.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Десерты</p>
               </div>
               <div className="imagesByCategory">
-                <img src="images/food&drinks/delivery.png" value = {icon} onClick={((e) => {setIcon(e.target.src)})}/>
+                <img
+                  src="images/food&drinks/delivery.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Доставка</p>
               </div>
             </div>
           </div>
         </div>
         {/* Housing */}
-        {/* <div className="categoriesImages">
+        <div className="categoriesImages">
           <div>
-            <h3>Жилье</h3>
+            <h3>Жилье & Траспорт</h3>
             <div className="categoryImg">
               <div>
-              <img src="images/housing/rent.png" value = {icon} onClick={((e) => {setIcon(e.target.src)})}/>
+                <img
+                  src="images/housing/rent.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Аренда</p>
               </div>
-              <div className="imagesByCategory">
-              <img src="images/housing/tax.png" value = {icon} onClick={((e) => {setIcon(e.target.src)})}/>
-                <p>Налоги</p>
-              </div>
+
               <div>
-                <div>img</div>
-                <p>Тарифы</p>
-              </div>
-              <div>
-                <div>img</div>
+                <img
+                  className="smallImg"
+                  src="images/housing/invoice.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Счета</p>
               </div>
-              <div>
-                <div>img</div>
-                <p>Бытовые материалы</p>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        {/* Transport */}
-        {/* <div className="categoriesImages">
-          <div>
-            <h3>Транспорт</h3>
-            <div className="categoryImg">
-              <div>
-                <div>img</div>
-                <p>Парковка</p>
-              </div>
+
               <div className="imagesByCategory">
-                <div>img</div>
+                <img
+                  src="images/transportation/gas.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Бензин</p>
               </div>
               <div>
-                <div>img</div>
-                <p>Общественный Транспорт</p>
+                <img
+                  src="images/transportation/bus.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
+                <p>Транспорт</p>
               </div>
+
               <div>
-                <div>img</div>
-                <p>Такси</p>
-              </div>
-              <div>
-                <div>img</div>
+                <img
+                  src="images/transportation/hammer.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Ремонт</p>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
+
         {/* Healthcare */}
-        {/* <div className="categoriesImages">
+        <div className="categoriesImages">
           <div>
             <h3>Образ жизни</h3>
             <div className="categoryImg">
               <div>
-                <div>img</div>
-                <p>Врач</p>
+                <img
+                  src="images/others/doctor.webp"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
+                <p>Больница</p>
               </div>
               <div className="imagesByCategory">
-              <img src="images/school.jpeg" value = {icon} onClick={((e) => {setIcon(e.target.src)})}/>
-                <p>Образование</p>
+                <img
+                  src="images/others/child.webp"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
+                <p>Дети</p>
               </div>
               <div>
-                <div>img</div>
+                <img
+                  src="images/others/shopping.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Покупки</p>
               </div>
+
               <div>
-                <div>img</div>
-                <p>Дети</p>
+                <img
+                  src="images/others/travel.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
+                <p>Путешествия</p>
+              </div>
+              <div>
+                <img
+                  src="images/others/bar.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
+                <p>Развлечения</p>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
         {/* Incomes */}
-        {/* <div className="categoriesImages">
+        <div className="categoriesImages">
           <div>
-            <h3>Доходы</h3>
+            <h3>Доходы & Сбережения</h3>
             <div className="categoryImg">
               <div>
-                <div>img</div>
-                <p>Заработная плаиа</p>
+                <img
+                  src="images/income/salary.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
+                <p>Заработная плата</p>
               </div>
               <div className="imagesByCategory">
-                <div>img</div>
+                <img
+                  src="images/income/savings.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Сбережения</p>
               </div>
               <div>
-                <div>img</div>
+                <img
+                  src="images/income/investments.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Инвестиции</p>
               </div>
               <div>
-                <div>img</div>
+                <img
+                  src="images/income/bank.png"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
                 <p>Проценты</p>
               </div>
-            </div>
-          </div>
-        </div> */}
-        {/* others */}
-        {/* <div className="categoriesImages">
-          <div>
-            <h3>Развлечения</h3>
-            <div className="categoryImg">
               <div>
-                <div>img</div>
-                <p>Restaurant</p>
-              </div>
-              <div className="imagesByCategory">
-                <div>img</div>
-                <p>Restaurant</p>
-              </div>
-              <div>
-                <div>img</div>
-                <p>Restaurant</p>
-              </div>
-              <div>
-                <div>img</div>
-                <p>Restaurant</p>
+                <img
+                  src="images/income/box.webp"
+                  value={icon}
+                  onClick={(e) => {
+                    setIcon(e.target.src);
+                  }}
+                />
+                <p>Прочее</p>
               </div>
             </div>
           </div>
-        </div> */}
-        
+        </div>
       </div>
     </div>
   );
